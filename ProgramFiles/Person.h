@@ -5,7 +5,7 @@ public:
 
 	void setInfected(bool i, int d) {
 		infected = i;
-		dayInfected = d; //Need an excemption for if already infected before, or way to store multiple infections
+		dayInfected = d; //Need an exception for if already infected before, or way to store multiple infections
 	}
 
 	void setDaysSinceLeft(int d) {
