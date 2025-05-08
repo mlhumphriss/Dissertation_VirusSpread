@@ -39,8 +39,11 @@ public:
 		}
 		else {
 			infected = i;
-			dayInfected = d; //Need an exception for if already infected before, or way to store multiple infections
-			daysInfected.push_back(d);
+			if (infected == true) {
+				asymptomatic = true;
+				dayInfected = d; //Fixes issues from before, but still overcomplicates infected. No longer a simple setter
+				daysInfected.push_back(d);
+			}
 		}
 	}
 
