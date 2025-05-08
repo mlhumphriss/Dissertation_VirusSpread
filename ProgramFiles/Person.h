@@ -1,5 +1,8 @@
+#include <iostream>
 #include <vector>
 #include <cstdlib>
+
+using namespace std;
 
 class Person {
 public:
@@ -30,8 +33,15 @@ public:
 
 
 	void setInfected(bool i, int d) {
-		infected = i;
-		dayInfected = d; //Need an exception for if already infected before, or way to store multiple infections
+		if (infected == true) {
+			infected = i; 
+			return;
+		}
+		else {
+			infected = i;
+			dayInfected = d; //Need an exception for if already infected before, or way to store multiple infections
+			daysInfected.push_back(d);
+		}
 	}
 
 	void setDaysSinceLeft(int d) {
