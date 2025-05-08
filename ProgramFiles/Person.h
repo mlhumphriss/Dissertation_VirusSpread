@@ -1,4 +1,5 @@
-
+#include <vector>
+#include <cstdlib>
 
 class Person {
 public:
@@ -8,7 +9,7 @@ public:
 		this->jobImportance = jI;
 		this->rebeliousness = rebel;
 		this->asymptomatic = false;
-		this->dayInfected = 0;
+		this->dayInfected = nullptr;
 		this->timesInfected = 0;
 		this->infected = false;
 		this->vaccinated = vac;
@@ -16,6 +17,17 @@ public:
 	};
 
 	~Person() {}
+
+	void infectionUpdate(int minIP, int asymP, int day) {
+		int infectPeriod = day - this->dayInfected;
+		if (infectPeriod > asymP && this->asymptomatic == true) {
+			this->asymptomatic = false;
+		}
+		if (infectPeriod > minIP && (rand()% 2)>0) {
+			this->infected = false;
+		}
+	}
+
 
 	void setInfected(bool i, int d) {
 		infected = i;
@@ -63,6 +75,7 @@ protected:
 	bool	infected;
 	int		dayInfected;
 	int		timesInfected;
+	vector<int> daysInfected;
 
 	bool	vaccinated;
 	int		healthRisk;

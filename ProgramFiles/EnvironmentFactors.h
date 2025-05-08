@@ -8,6 +8,8 @@ protected:
 	bool	pushingHandSanitizer;
 	bool	lockdown;
 
+	int		minInfectionperiod;
+	int		asymptomaticPeriod;
 
 
 };
