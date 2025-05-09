@@ -7,6 +7,9 @@ using namespace std;
 class Inputs {
 public:
 
+
+
+
 	bool getILockdown() { return iLockdown; }
 	bool getIMaskEnforced() { return iMasksEnforced; }
 	bool getISocialDistancing() { return iSocialDistancing; }
@@ -15,6 +18,7 @@ public:
 	int  getIAsympPeriod() { return iAsymptomaticPeriod; }
 	float getIGroupRebel() { return iGroupRebel; }
 	bool getIVaccinationRollout() { return iVaccinationRollout; }
+	int getILengthSim() { return getILengthSim; }
 
 	void setILockdown(bool l) {
 		iLockdown = l;
@@ -44,4 +48,6 @@ protected:
 	int		iAsymptomaticPeriod;
 
 	float	iGroupRebel;
+
+	int		iLengthSim;
 };
