@@ -23,7 +23,7 @@ public:
 		if (pop < dRW.getReadPop()) { return 1; }
 		return 0;
 	}
-	void initialiseDatabase(Person* worldPop[popDB]); //todo
+	void initialiseDatabase(Person* worldPop[], int size); //todo
 
 
 

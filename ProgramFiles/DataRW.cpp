@@ -1,6 +1,6 @@
 #include "DataRW.h"
 
-DataRW::writePopDataFile(int pop, time_t seed) {
+int DataRW::writePopDataFile(int pop, time_t seed) {
     ofstream saveFile;
     saveFile.open(testDataFile.c_str());
     saveFile << pop << " "  << seed << " " << "\n";
@@ -8,8 +8,14 @@ DataRW::writePopDataFile(int pop, time_t seed) {
     return 0;
 }
 
-DataRW::readPopDataFile() {
+int DataRW::readPopDataFile() {
+    int pop;
+    int seed;
     ifstream infile(testDataFile);
+    if (!infile.is_open()) {
+        cerr << "Error: Could not open file " << testDataFile << endl;
+        return -1;
+    }
     infile >> pop;
     infile >> seed;
     infile.close();

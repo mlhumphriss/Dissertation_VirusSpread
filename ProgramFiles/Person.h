@@ -7,12 +7,13 @@ using namespace std;
 class Person {
 public:
 
+	Person() {};
 	Person(int hR, int jI, float rebel, bool vac) {
-		healthRisk = hr;
+		healthRisk = hR;
 		jobImportance = jI;
 		rebeliousness = rebel;
 		asymptomatic = false;
-		dayInfected = nullptr;
+		dayInfected = NULL;
 		timesInfected = 0;
 		infected = false;
 		vaccinated = vac;

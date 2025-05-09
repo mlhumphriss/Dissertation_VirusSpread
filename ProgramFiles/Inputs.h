@@ -18,13 +18,13 @@ public:
 	int  getIAsympPeriod() { return iAsymptomaticPeriod; }
 	float getIGroupRebel() { return iGroupRebel; }
 	bool getIVaccinationRollout() { return iVaccinationRollout; }
-	int getILengthSim() { return getILengthSim; }
+	int getILengthSim() { return iLengthSim; }
 
 	void setILockdown(bool l) {
 		iLockdown = l;
 	}
 	void setISocialDistancing(bool s) {
-		iSocialDistancing = d;
+		iSocialDistancing = s;
 	}
 	void setIPushHandSani(bool h) {
 		iPushingHandSanitizer = h;

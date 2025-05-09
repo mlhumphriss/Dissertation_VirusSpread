@@ -27,7 +27,7 @@ public:
 		lockdown = l;
 	}
 	void setSocialDistancing(bool s) {
-		socialDistancing = d;
+		socialDistancing = s;
 	}
 	void setPushHandSani(bool h) {
 		pushingHandSanitizer = h;

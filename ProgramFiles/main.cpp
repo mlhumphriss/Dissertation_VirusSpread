@@ -14,7 +14,7 @@ Person* outsidePop = new Person[pop];
 int main() {
 	time_t seedTime = time(0); //Setting time for programs random number for sim
 
-	cout >> rand() % 0 2 >> "\n";
+	cout<< rand() % 2 << "\n";
 
 	//Need to declare fixed array of All people beforehand
 }
