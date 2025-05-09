@@ -8,26 +8,26 @@ class Person {
 public:
 
 	Person(int hR, int jI, float rebel, bool vac) {
-		this->healthRisk = hr;
-		this->jobImportance = jI;
-		this->rebeliousness = rebel;
-		this->asymptomatic = false;
-		this->dayInfected = nullptr;
-		this->timesInfected = 0;
-		this->infected = false;
-		this->vaccinated = vac;
-		this->daysSinceLeft = 0;
+		healthRisk = hr;
+		jobImportance = jI;
+		rebeliousness = rebel;
+		asymptomatic = false;
+		dayInfected = nullptr;
+		timesInfected = 0;
+		infected = false;
+		vaccinated = vac;
+		daysSinceLeft = 0;
 	};
 
 	~Person() {}
 
 	void infectionUpdate(int minIP, int asymP, int day) {
-		int infectPeriod = day - this->dayInfected;
-		if (infectPeriod > asymP && this->asymptomatic == true) {
-			this->asymptomatic = false;
+		int infectPeriod = day - dayInfected;
+		if (infectPeriod > asymP && asymptomatic == true) {
+			asymptomatic = false;
 		}
 		if (infectPeriod > minIP && (rand()% 2)>0) {
-			this->infected = false;
+			infected = false;
 		}
 	}
 

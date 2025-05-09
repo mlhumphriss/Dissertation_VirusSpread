@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 class EnvironmentFactors {
 public:
 	EnvironmentFactors(bool mE, bool sD, bool pHS, bool l, bool vR, int mIP, int aP, float gR) {

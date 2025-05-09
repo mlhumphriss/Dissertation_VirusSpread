@@ -3,7 +3,9 @@
 #include <ctime>
 
 int main() {
-	srand(time(0));
+	time_t seedTime = time(0); //Setting time for programs random number for sim
+
+	
 
 	//Need to declare fixed array of All people beforehand
 }
