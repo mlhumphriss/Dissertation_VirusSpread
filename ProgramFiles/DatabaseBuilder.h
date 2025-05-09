@@ -3,11 +3,14 @@
 #include <ctime>
 #include <cstdlib>
 #include "DataRW.h"
+#include "Person.h"
+#include "EnvironmentFactors.h"
 
 using namespace std;
 
 class DatabaseBuilder {
 public:
+	DatabaseBuilder(int pop) { popDB = pop; };
 
 	int createNewSeed(int pop, DataRW dRW) {
 		seed = time(0);
@@ -20,9 +23,11 @@ public:
 		if (pop < dRW.getReadPop()) { return 1; }
 		return 0;
 	}
+	void initialiseDatabase(Person* worldPop[popDB]); //todo
 
 
 
 protected:
 	time_t seed;
+	int popDB;
 };

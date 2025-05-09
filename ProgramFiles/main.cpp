@@ -3,6 +3,8 @@
 #include <ctime>
 #include "Person.h"
 
+using namespace std;
+
 int pop = 100;
 
 //Think this should create an array of pointers to Person class but unsure
@@ -12,7 +14,7 @@ Person* outsidePop = new Person[pop];
 int main() {
 	time_t seedTime = time(0); //Setting time for programs random number for sim
 
-	
+	cout >> rand() % 0 2 >> "\n";
 
 	//Need to declare fixed array of All people beforehand
 }
